@@ -5,6 +5,8 @@ library(rgdal)
 library(classInt)
 library(RColorBrewer)
 
+rootPath = <INSERT ROOT PATH>;
+
 # https://mgimond.github.io/Spatial/data-manipulation-in-r.html
 ####################################################################################
 #EXAMPLE BELOW FROM WEB LINK BELOW FOR PLOTTING CHLOROPLETH FOR SHAPE FILE
@@ -35,7 +37,7 @@ spplot(s1, z="Income", at = brks, col.regions=pal)
 #Note - takes minutes to load up graph and not so clear 
 #Better to operate on higher level e.g. county level shape file and associated table
 
-rootPath = 'C:/Users/JohnArm/Documents/GitHub/GeoSpatial/';
+
 dataPath=paste0(rootPath, 'Inputs/')
 ogrInfo('C:/Users/JohnArm/Documents/GitHub/GeoSpatial/Inputs','Census2011_Small_Areas_generalised20m')
 shpFile=paste0(dataPath, 'Census2011_Small_Areas_generalised20m.shp')
